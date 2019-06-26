@@ -1,0 +1,42 @@
+{
+  "sc":{
+    "name":"GFX",
+    "include":"gfx.h",
+    "uid":"GFX_UID",
+    "rpc":"gfxRpc",
+    "ver":"GFX_VER",
+    "loop":"",
+    "priv":[
+      {
+        "type":"s",
+        "struct":{
+          "type":"sGfxPriv",
+          "name":"gfx_priv",
+          "fields":[
+            {
+              "type":"i",
+              "des":"cam_base",
+              "def":"SDRAM_ARBITER_BASE + SDRAM_ARBITER_CAM_OFFSET_A * sizeof(short)"
+            },
+            {
+              "type":"i",
+              "des":"fb_base",
+              "def":"SDRAM_ARBITER_BASE + SDRAM_ARBITER_FB_OFFSET * sizeof(short)"
+            }
+          ]
+        }
+      }
+    ],
+    "cfg":[
+      {"type":"i", "des":"GFX_FB_WIDTH", "def":"640"},
+      {"type":"i", "des":"GFX_FB_HEIGHT", "def":"480"},
+      {"type":"b", "des":"GFX_FONTS", "def":"1"},
+      {"type":"s", "des":"GFX_FONT_FILE", "def":"Org_01.h"},
+      {"type":"s", "des":"GFX_FONT_NAME", "def":"Org_01"},
+      {"type":"b", "des":"GFX_LOGO", "def":"0"},
+      {"type":"s", "des":"GFX_LOGO_FILE", "def":"logo.h"},
+      {"type":"s", "des":"GFX_LOGO_NAME", "def":"arduinoLogo"}
+    ],
+    "swpck":"GFX"
+  }
+}
